@@ -9,16 +9,16 @@ interface Prop {
 
 const Card2: React.FC<Prop> = ({img, title, number, decimal}) => {
     return(
-       <div className="flex justify-center gap-3 items-center bg-red-500 rounded-2xl h-[5em] w-[11em]">
+       <div className="flex justify-center gap-3 items-center bg-purple-custom rounded-2xl h-[5em] w-[11em]">
             <img src={img}/>
-            <div className="flex flex-col justify-center h-[4em] bg-blue-200">
+            <div className="flex flex-col justify-center h-[4em]">
                 <h3>{title}</h3>
                 <div className="flex flex-row">
                     <label>{number}</label>
                     <p>Km/h</p>
                 </div> 
             </div>
-            <div className="bg-blue-500 h-[4em] flex items-end">
+            <div className="h-[4em] flex items-end">
                 <label>{decimal}</label>
             </div>
             

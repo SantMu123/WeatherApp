@@ -7,6 +7,7 @@ import Card2 from '../components/card2.tsx';
 import HourlyForecast from '../components/HourlyForecast.tsx';
 import LineChart from '../components/Graph.tsx';
 import HorizontalBarChart from '../components/Graph2.tsx';
+import Pressure from '../storage/img/waves.png'
 
 const Home: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,9 +28,9 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className='relative'>
+    <div className='relative bg-gray-custom'>
       {/* Header fijo con cambio de diseño cuando se scrollea */}
-      <div className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${scrolled ? 'bg-blue-500 h-[15em]' : 'bg-transparent h-[25em] my-[2em]'}`}>
+      <div className='fixed top-0 left-0 w-full z-10 transition-all duration-300 bg-transparent h-[25em] my-[2em]'>
         <Header />
       </div>
 
@@ -40,8 +41,8 @@ const Home: React.FC = () => {
 
       <div className='grid grid-cols-2 p-4 gap-3 mt-[4em]'>
         <Card2 img={windLogo} title="Wind Speed" number="32" decimal="10" />
-        <Card2 img={windLogo} title="Wind Speed" number="32" decimal="10" />
-        <Card2 img={windLogo} title="Wind Speed" number="32" decimal="10" />
+        <Card2 img={Pressure} title="Wind Speed" number="32" decimal="10" />
+        <Card2 img={Pressure} title="Wind Speed" number="32" decimal="10" />
         <Card2 img={windLogo} title="Wind Speed" number="32" decimal="10" />
       </div>
 
